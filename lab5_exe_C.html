@@ -2,7 +2,7 @@
 =========================================================
 Name        : lab5_exe_C.html
 Assignment  : Lab 5, Exercise C
-Author(s)   : Salem Shadfan
+Author(s)   : Salem Shadfan,Kamsi Iwuchukwu
 Submission  : May 14, 2024
 Description : DOM Elements.
 =========================================================
@@ -207,33 +207,28 @@ Description : DOM Elements.
 			document.addEventListener('DOMContentLoaded', function afterRender() {
 				// Task 1: Set the text content of all elements with the class 'companyName' and remove their border
 				var task1 = document.getElementsByClassName('companyName')
-				for (var i = 0; i < elements.length; i++) {
-				elements[i].innerText = 'Salem'; 
-				elements[i].style.border = 'none'; 
+				for (var i = 0; i < task1.length; i++) {
+				task1[i].innerText = 'Salem'; 
+				task1[i].style.border = 'none'; 
 				}
 
 
 				// Task 2: Change the background color of the navigation bar
-				document.getElementById('navbar').style.backgroundColor = 'blue';
+				document.querySelector('nav').style.backgroundColor = 'lightblue';
 
 				// Task 3: Hide the section titled 'What is full-stack?'
-				var task3 = document.getElementsByTagName()
-				for (var i = 0; i < task3.length; i++) {
-					if (task3[i].textContent === 'What is full-stack?') {
-						let article = task3[i].parentNode;
-						article.style.display = 'none';
-						break;
-					}
-				
-				}
+				var task3 = document.querySelector('article');
+    			task3.style.display = 'none';
+
 
 
  
 				// Task 4: Create a new <p> element and append it to the 'About Us' section
-				var task4 = document.createElement('p');
-				task4.textContent = 'This is a new paragraph';
-				var aboutus = document.getElementsByClassName('about-us')[0];
-				aboutus.appendChild(p)
+					var task4 = document.querySelector('section');
+					var p = document.createElement('p');
+					p.textContent = 'This is a new paragraph';
+					p.style.color = 'red';
+					task4.appendChild(p);
 
 
 				// Task 5: Add placeholders to input elements based on their corresponding label IDs
